@@ -9,6 +9,7 @@ const usersRouter = require('./routes/users');
 const demoMockRouter = require('./routes/demo')
 const h5Router = require('./routes/h5')
 const wxRouter = require('./routes/wxapi')
+const taroRouter = require('./routes/taro')
 const app = express();
 const dataBase = require('./lib/index')
 const bodyParse = require('body-parser')
@@ -36,6 +37,7 @@ app.use('/users', usersRouter);
 app.use('/demo', demoMockRouter)
 app.use('/h5', h5Router)
 app.use('/wxapi', wxRouter)
+app.use('/taroapi',taroRouter)
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
